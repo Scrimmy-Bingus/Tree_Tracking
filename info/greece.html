@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1e1;
+            color: #3c3c3c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .donation-box {
+            background-color: #bfdab2;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .donation-box h3 {
+            color: #3b5c43;
+            margin-bottom: 10px;
+        }
+
+        .donation-box p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3b5c43;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 80%;
+        }
+
+        button {
+            background-color: #6c9c4b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #58873a;
+        }
+
+    /* Updated Flexbox for spacing between boxes */
+    .box-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Add spacing between boxes */
+        width: 100%;
+        max-width: 960px;
+        margin-bottom: 40px;
+    }
+
+    /* Box hover effect */
+    .info-box, .donation-box {
+        transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .info-box:hover, .donation-box:hover {
+        background-color: #f5f5f5; /* Subtle light grey on hover */
+        transform: scale(1.05); /* Slight scaling */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1e1; /* Soft beige background */
+            color: #3c3c3c;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3b5c43; /* Dark green */
+            margin-top: 40px;
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 15px;
+        }
+
+        /* Horizontal Box for Summary */
+        .summary-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 960px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .summary-box h2 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .summary-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Vertical Box Style for Vegetation and Donation Links */
+        .info-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* Donation Box Style */
+        .donation-box {
+            background-color: #bfdab2; /* Light green for donation boxes */
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .info-box h3, .donation-box h3 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p, .donation-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .list {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: disc;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #6c9c4b; /* Soft earthy green */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #58873a; /* Darker green */
+            transform: scale(1.05);
+        }
+
+        #toggle-highlight {
+            background-color: #3b8f2e;
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #toggle-highlight:hover {
+            background-color: #2d6a4f;
+            transform: scale(1.1);
+        }
+
+        .fun-fact {
+            font-size: 1.2em;
+            color: #3b5c43;
+            margin-top: 30px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Flexbox to arrange vertical boxes side by side */
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 960px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="donation-box">
+        <h3>Donation Tracker</h3>
+        <p id="total-donations">0</p>
+        <input type="number" id="donation-input" placeholder="Enter donation amount" min="0">
+        <button onclick="updateDonations()">Donate</button>
+    </div>
+    <h1>Russia</h1>
+    <div class="container">
+        <!-- Summary Box (Horizontal) -->
+        <div class="summary-box">
+            <h2>About Russia</h2>
+            <p>Russia, the largest country in the world, spans Eastern Europe and northern Asia, covering a vast array of ecosystems from tundra and taiga forests to steppes and mountainous regions. Its immense boreal forests, also known as taiga, account for over 20% of the world’s forested area, making it a crucial region for global climate regulation and carbon storage. The country is home to unique wildlife, including Siberian tigers, brown bears, and Amur leopards. With diverse landscapes and ecosystems, Russia plays a vital role in preserving global biodiversity.
+            </p>
+        </div>
+
+        <!-- Two Vertical Boxes: Vegetation & Donation Links -->
+        <div class="box-container">
+            <!-- Vegetation Box -->
+            <div class="info-box">
+                <h3>Vegetation in Russia</h3>
+                <p>Russia is home to a variety of vegetation types, including:</p>
+                <ul class="list">
+                    <li>Taiga forests</li>
+                    <li>Tundra</li>
+                    <li>Steppe grasslands</li>
+                    <li>Boreal forests</li>
+                </ul>
+            </div>
+
+            <!-- Donation Links Box -->
+            <div class="donation-box">
+                <h3>Donate to Reforestation</h3>
+                <p>Support Russia's reforestation efforts through these organizations:</p>
+                <ul class="list">
+                    <li><a href="https://example1.com" target="_blank">Example Organization 1</a></li>
+                    <li><a href="https://example2.com" target="_blank">Example Organization 2</a></li>
+                </ul>
+            </div>
+
+           
+
+        </div>
+
+        <!-- Fun Fact -->
+        <div class="fun-fact">
+            <p>Did you know? Lake Baikal in Russia is the deepest freshwater lake in the world!</p>
+        </div>
+
+        <!-- Highlight on Map and Back to Map buttons -->
+        <button id="toggle-highlight" class="btn">Highlight Russia on Map</button>
+        <a href="/game" class="btn">Back to Map</a>
+    </div>
+
+    <script>
+        let totalDonations = 0;
+
+function updateDonations() {
+    const donationInput = document.getElementById('donation-input');
+    const donationAmount = parseFloat(donationInput.value);
+
+    if (!isNaN(donationAmount) && donationAmount > 0) {
+        totalDonations += donationAmount;
+        document.getElementById('total-donations').textContent = totalDonations.toFixed(2);
+        donationInput.value = ''; // Clear the input field
+    }
+}
+        document.addEventListener("DOMContentLoaded", function () {
+            const countryId = 'RU'; // Country ID for Russia
+            const toggleButton = document.getElementById('toggle-highlight');
+
+            // Load highlighted countries from localStorage
+            const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
+
+            // Update button text based on current highlight state
+            const isHighlighted = highlightedCountries.includes(countryId);
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Russia on Map';
+
+            // Add click event to toggle button
+            toggleButton.addEventListener('click', function () {
+                if (isHighlighted) {
+                    // Remove highlight
+                    const index = highlightedCountries.indexOf(countryId);
+                    if (index !== -1) {
+                        highlightedCountries.splice(index, 1);
+                    }
+                } else {
+                    // Add highlight
+                    highlightedCountries.push(countryId);
+                }
+
+                // Save updated list to localStorage
+                localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
+
+                // Update button text
+                toggleButton.textContent = isHighlighted ? 'Highlight Russia on Map' : 'Remove Highlight';
+                location.reload(); // Reload page to update state
+            });
+        });
+    </script>
+</body>
+</html>

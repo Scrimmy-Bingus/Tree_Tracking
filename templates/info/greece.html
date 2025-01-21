@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greece</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+            margin-top: 30px;
+            font-size: 2.5em;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .box h2 {
+            color: #2d6a4f;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .box a {
+            text-decoration: none;
+            color: #3b8f2e;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .box a:hover {
+            color: #2d6a4f;
+        }
+
+        .btn {
+            background-color: #3b8f2e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2d6a4f;
+        }
+
+        .highlight-btn, .undo-btn {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .highlight-btn:hover, .undo-btn:hover {
+            background-color: #e6e6e6;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .info-box a {
+            text-decoration: none;
+            color: #3b8f2e;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .info-box a:hover {
+            color: #2d6a4f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Greece</h1>
+    <div class="container">
+        
+        <!-- Highlight Button -->
+        <button id="toggle-highlight" class="btn">Highlight Greece</button>
+
+        <!-- Donation Information Boxes -->
+        <div class="info-box">
+            <h2>Support Tree Planting in Greece</h2>
+            <p>Contribute to the preservation of Greece's vast forests by donating to organizations dedicated to reforestation efforts in the region.</p>
+            <a href="https://www.one-tree-planted.org/" target="_blank">Donate to One Tree Planted</a>
+        </div>
+
+        <div class="info-box">
+            <h2>Other Ways to Help</h2>
+            <p>Learn more about forest conservation in Greece and how you can make a difference through sustainable practices and donations.</p>
+            <a href="https://www.wwf.gr/" target="_blank">Visit WWF Greece</a>
+        </div>
+
+        <a href="/" class="btn">Back to Map</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const countryId = 'GR'; // Country ID for Greece
+            const toggleButton = document.getElementById('toggle-highlight');
+
+            // Load highlighted countries from localStorage
+            const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
+
+            // Update button text based on current highlight state
+            const isHighlighted = highlightedCountries.includes(countryId);
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Greece';
+
+            // Add click event to toggle button
+            toggleButton.addEventListener('click', function () {
+                if (isHighlighted) {
+                    // Remove highlight
+                    const index = highlightedCountries.indexOf(countryId);
+                    if (index !== -1) {
+                        highlightedCountries.splice(index, 1);
+                    }
+                } else {
+                    // Add highlight
+                    highlightedCountries.push(countryId);
+                }
+
+                // Save updated list to localStorage
+                localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
+
+                // Update button text
+                toggleButton.textContent = isHighlighted ? 'Highlight Greece' : 'Remove Highlight';
+                location.reload(); // Reload page to update text properly
+            });
+        });
+    </script>
+
+</body>
+</html>

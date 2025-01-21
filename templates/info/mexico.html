@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexico</title>
+</head>
+<body>
+    <h1>Mexico</h1>
+    <button id="toggle-highlight">Toggle Highlight</button>
+    <a href="/">Back to Map</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const countryId = 'MX'; // Country ID for Mexico
+            const toggleButton = document.getElementById('toggle-highlight');
+
+            // Load highlighted countries from localStorage
+            const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
+
+            // Update button text based on current highlight state
+            const isHighlighted = highlightedCountries.includes(countryId);
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Mexico';
+
+            // Add click event to toggle button
+            toggleButton.addEventListener('click', function () {
+                if (isHighlighted) {
+                    // Remove highlight
+                    const index = highlightedCountries.indexOf(countryId);
+                    if (index !== -1) {
+                        highlightedCountries.splice(index, 1);
+                    }
+                } else {
+                    // Add highlight
+                    highlightedCountries.push(countryId);
+                }
+
+                // Save updated list to localStorage
+                localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
+
+                // Update button text
+                toggleButton.textContent = isHighlighted ? 'Highlight Mexico' : 'Remove Highlight';
+                location.reload(); // Reload page to update text properly
+            });
+        });
+    </script>
+</body>
+</html>

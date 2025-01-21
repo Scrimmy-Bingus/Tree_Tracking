@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Page</title>
+</head>
+<body>
+    <h1>Welcome to the United States</h1>
+    <button id="toggle-us">Toggle Highlight for the United States</button>
+    <a href="index.html">Back to Map</a>
+
+    <script>
+        const HIGHLIGHT_KEY = 'highlightedCountries';
+
+        function getHighlightedCountries() {
+            const data = localStorage.getItem(HIGHLIGHT_KEY);
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveHighlightedCountries(ids) {
+            localStorage.setItem(HIGHLIGHT_KEY, JSON.stringify(ids));
+        }
+
+        document.getElementById("toggle-us").addEventListener("click", function () {
+            const highlightedCountries = getHighlightedCountries();
+            const countryId = "US"; // United States ID in SVG
+
+            if (highlightedCountries.includes(countryId)) {
+                const index = highlightedCountries.indexOf(countryId);
+                highlightedCountries.splice(index, 1);
+            } else {
+                highlightedCountries.push(countryId);
+            }
+
+            saveHighlightedCountries(highlightedCountries);
+
+            alert(`US highlight toggled!`);
+        });
+    </script>
+</body>
+</html>

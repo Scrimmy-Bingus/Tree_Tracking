@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guyana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1e1; /* Soft beige background */
+            color: #3c3c3c;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3b5c43; /* Dark green */
+            margin-top: 40px;
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 15px;
+        }
+
+        /* Horizontal Box for Summary */
+        .summary-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 960px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .summary-box h2 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .summary-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex: 2;
+        }
+
+        /* Vertical Box Style for Vegetation and Donation Links */
+        .info-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* Donation Box with a Slightly Different Color */
+        .donation-box {
+            background-color: #e8f3e3; /* Light green for donation box */
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .info-box h3,
+        .donation-box h3 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p,
+        .donation-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .list {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: disc;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #6c9c4b; /* Soft earthy green */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #58873a; /* Darker green */
+            transform: scale(1.05);
+        }
+
+        #toggle-highlight {
+            background-color: #3b8f2e;
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-highlight:hover {
+            background-color: #2d6a4f;
+        }
+
+        .fun-fact {
+            font-size: 1.2em;
+            color: #3b5c43;
+            margin-top: 30px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Flexbox to arrange two vertical boxes side by side */
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 960px;
+            margin-bottom: 40px;
+            gap: 10px;
+        }
+
+        /* Adjust boxes so they are the same height */
+        .info-box, .donation-box {
+            flex: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guyana</h1>
+    <div class="container">
+        <!-- Summary Box (Horizontal) -->
+        <div class="summary-box">
+            <div>
+                <h2>About Guyana</h2>
+                <p>Guyana, located on the northeastern coast of South America, is home to some of the most biodiverse rainforests in the world. Its rich ecosystems support countless species of flora and fauna, making it an essential location for environmental preservation efforts.</p>
+            </div>
+        </div>
+
+        <!-- Two Vertical Boxes: Vegetation & Donation Links -->
+        <div class="box-container">
+            <!-- Vegetation Box -->
+            <div class="info-box">
+                <h3>Vegetation in Guyana</h3>
+                <p>The vegetation in Guyana includes various types of forests, from rainforests to savannahs, all contributing to its rich biodiversity. Key plant species include:</p>
+                <ul class="list">
+                    <li>Greenheart</li>
+                    <li>Mahogany</li>
+                    <li>Rosewood</li>
+                    <li>Baromalli</li>
+                </ul>
+            </div>
+
+            <!-- Donation Links Box -->
+            <div class="donation-box">
+                <h3>Donate to Reforestation</h3>
+                <p>Your donations help reforest Guyana's forests and protect its diverse ecosystems. Contribute to the following organizations:</p>
+                <ul class="list">
+                    <li><a href="https://www.one-tree-planted.org/" target="_blank">One Tree Planted</a></li>
+                    <li><a href="https://www.treesforlife.org/" target="_blank">Trees for Life</a></li>
+                    <li><a href="https://www.globalforests.org/" target="_blank">Global Forests Fund</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Fun Fact -->
+        <div class="fun-fact">
+            <p>Did you know? Guyana is home to the world’s largest single-drop waterfall, Kaieteur Falls, located deep within its rainforest!</p>
+        </div>
+
+        <!-- Highlight on Map and Back to Map buttons -->
+        <button id="toggle-highlight" class="btn">Highlight Guyana on Map</button>
+        <a href="/game" class="btn">Back to Map</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const countryId = 'GY'; // Country ID for Guyana
+            const toggleButton = document.getElementById('toggle-highlight');
+
+            // Load highlighted countries from localStorage
+            const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
+
+            // Update button text based on current highlight state
+            const isHighlighted = highlightedCountries.includes(countryId);
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Guyana on Map';
+
+            // Add click event to toggle button
+            toggleButton.addEventListener('click', function () {
+                if (isHighlighted) {
+                    // Remove highlight
+                    const index = highlightedCountries.indexOf(countryId);
+                    if (index !== -1) {
+                        highlightedCountries.splice(index, 1);
+                    }
+                } else {
+                    // Add highlight
+                    highlightedCountries.push(countryId);
+                }
+
+                // Save updated list to localStorage
+                localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
+
+                // Update button text
+                toggleButton.textContent = isHighlighted ? 'Highlight Guyana on Map' : 'Remove Highlight';
+                location.reload(); // Reload page to update text properly
+            });
+        });
+    </script>
+
+</body>
+</html>

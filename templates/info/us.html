@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United States - Tree Planting</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #F1F4F0;  /* Light earthy beige */
+            background-image: linear-gradient(135deg, rgba(241, 244, 240, 0.5) 25%, rgba(210, 180, 140, 0.2) 50%, rgba(240, 205, 170, 0.1) 75%);
+            background-size: 200% 200%;  /* Subtle gradient effect */
+            color: #3d5a3a;  /* Dark earthy green text */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #2e4b35;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 12px;
+            padding: 25px;
+            color: #2d4f2f;
+            width: 30%;
+            min-width: 250px;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .long-box {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .box h2 {
+            font-size: 1.8em;
+            color: #6b8e23;
+            margin-bottom: 15px;
+        }
+
+        .box p, .box ul {
+            font-size: 1.1em;
+            color: #3e5b3c;
+        }
+
+        .box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .box a {
+            text-decoration: none;
+            color: #8b4513;
+            font-weight: bold;
+        }
+
+        .box a:hover {
+            color: #6b8e23;
+        }
+
+        .input-box input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #8b4513;
+            background-color: #fff7e6;
+        }
+
+        .btn {
+            background-color: #8b4513;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #6b8e23;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>United States - Tree Planting</h1>
+
+    <div class="container">
+        <!-- Long Box: Country Background -->
+        <div class="box long-box">
+            <h2>About the United States</h2>
+            <p>The United States is home to a vast array of ecosystems, from temperate forests to coastal wetlands. Tree planting efforts play a critical role in protecting these diverse habitats and fighting climate change.</p>
+            <p>By supporting tree planting initiatives in the U.S., you contribute to the preservation of these ecosystems and the fight against environmental challenges.</p>
+        </div>
+
+        <!-- Vertical Box 1: Types of Trees -->
+        <div class="box">
+            <h2>Types of Trees</h2>
+            <p>The U.S. is known for a variety of iconic tree species, including:</p>
+            <ul>
+                <li>Oak</li>
+                <li>Redwood</li>
+                <li>Pine</li>
+                <li>Maple</li>
+                <li>Willow</li>
+            </ul>
+            <p>Planting these trees helps improve air quality and support local wildlife.</p>
+        </div>
+
+        <!-- Vertical Box 2: Tree Planting Links -->
+        <div class="box">
+            <h2>How to Plant Trees</h2>
+            <p>Help support tree planting in the U.S. by donating to these organizations:</p>
+            <ul>
+                <li><a href="https://www.arborday.org/" target="_blank">Arbor Day Foundation</a></li>
+                <li><a href="https://www.onetreeplanted.org/" target="_blank">One Tree Planted</a></li>
+                <li><a href="https://www.treesatlanta.org/" target="_blank">Trees Atlanta</a></li>
+            </ul>
+        </div>
+
+        <!-- Input Box: Donation -->
+        <div class="box input-box">
+            <h2>Track Your Donation</h2>
+            <form action="#" method="POST">
+                <label for="donation-amount">How much did you donate?</label><br>
+                <input type="number" id="donation-amount" name="donation-amount" placeholder="Amount in $" required>
+                <br>
+                <button type="submit" class="btn">Submit Donation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div style="text-align: center; margin-top: 30px;">
+        <button class="btn highlight-button" onclick="window.location.href='/?highlight=US'">Highlight United States</button>
+        <button class="btn" onclick="window.location.href='/'">Save & Quit</button>
+        <button class="btn" onclick="window.location.href='/?highlight=none'">Undo Highlight</button>
+    </div>
+</body>
+</html>
