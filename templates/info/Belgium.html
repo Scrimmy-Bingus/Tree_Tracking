@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States</title>
+    <title>Belgium</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -151,59 +151,59 @@
 </head>
 <body>
 
-    <h1>United States</h1>
+    <h1>Belgium</h1>
     <div class="container">
         <div class="summary-box">
             <div>
-                <h2>About the United States</h2>
-                <p>The United States, the third-largest country in the world, is known for its diverse landscapes, ranging from the vast plains of the Midwest to the towering Rocky Mountains, the lush forests of the Pacific Northwest, and the unique ecosystems of the Everglades. The U.S. is home to a wide variety of wildlife and plant species, and it plays a significant role in global environmental conservation efforts.</p>
+                <h2>About Belgium</h2>
+                <p>Belgium, a small yet diverse country in Western Europe, is known for its rich history, medieval towns, and vibrant culture. Despite its small size, Belgium boasts a variety of landscapes, including dense forests, rolling hills, and coastal plains. The country is committed to environmental sustainability and has several initiatives to protect its natural habitats and biodiversity.</p>
             </div>
         </div>
 
         <div class="box-container">
             <div class="info-box">
-                <h3>Vegetation in the United States</h3>
-                <p>The United States features a wide range of vegetation, from temperate forests to deserts and grasslands. Key species include:</p>
+                <h3>Vegetation in Belgium</h3>
+                <p>Belgium's vegetation includes a mix of deciduous and coniferous forests, as well as grasslands and wetlands. Key species include:</p>
                 <ul class="list">
-                    <li>Redwood Trees</li>
-                    <li>Douglas Fir</li>
-                    <li>Ponderosa Pine</li>
+                    <li>Beech Trees</li>
                     <li>Oak Trees</li>
-                    <li>Maple Trees</li>
-                    <li>Joshua Trees</li>
-                    <li>Saguaro Cactus</li>
-                    <li>Prairie Grasses</li>
+                    <li>Birch Trees</li>
+                    <li>Pine Trees</li>
+                    <li>Spruce Trees</li>
+                    <li>Wildflowers (e.g., Bluebells)</li>
+                    <li>Heather</li>
+                    <li>Reeds (in wetlands)</li>
                 </ul>
             </div>
 
             <div class="donation-box">
                 <h3>Donate to Reforestation</h3>
-                <p>Help restore the United States’ ecosystems by supporting these organizations:</p>
+                <p>Help restore Belgium’s ecosystems by supporting these organizations:</p>
                 <ul class="list">
-                    <li><a href="https://www.americanforests.org" target="_blank">American Forests</a></li>
-                    <li><a href="https://www.nature.org" target="_blank">The Nature Conservancy</a></li>
-                    <li><a href="https://www.arborday.org" target="_blank">Arbor Day Foundation</a></li>
-                    <li><a href="https://www.nationalforests.org" target="_blank">National Forest Foundation</a></li>
+                    <li><a href="https://www.bosplus.be" target="_blank">BOS+</a></li>
+                    <li><a href="https://www.natuurpunt.be" target="_blank">Natuurpunt</a></li>
+                    <li><a href="https://www.wwf.be" target="_blank">WWF Belgium</a></li>
+                    <li><a href="https://www.greenbelgium.org" target="_blank">Green Belgium</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="fun-fact">
-            <p>Did you know? The United States has over 750 million acres of forest, covering about one-third of the country's total land area!</p>
+            <p>Did you know? Belgium has over 20% of its land area covered by forests, and it is home to the Sonian Forest, a UNESCO World Heritage candidate!</p>
         </div>
 
-        <button id="toggle-highlight" class="btn">Highlight the United States on Map</button>
+        <button id="toggle-highlight" class="btn">Highlight Belgium on Map</button>
         <a href="/game" class="btn">Back to Map</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const countryId = 'US'; // Country ID for the United States
+            const countryId = 'BE'; // Country ID for Belgium
             const toggleButton = document.getElementById('toggle-highlight');
 
             const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
             const isHighlighted = highlightedCountries.includes(countryId);
-            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight the United States on Map';
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Belgium on Map';
 
             toggleButton.addEventListener('click', function () {
                 if (isHighlighted) {
@@ -216,7 +216,7 @@
                 }
 
                 localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
-                toggleButton.textContent = isHighlighted ? 'Highlight the United States on Map' : 'Remove Highlight';
+                toggleButton.textContent = isHighlighted ? 'Highlight Belgium on Map' : 'Remove Highlight';
                 location.reload();
             });
         });

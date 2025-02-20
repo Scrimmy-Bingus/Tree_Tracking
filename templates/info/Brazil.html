@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States</title>
+    <title>Brazil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -151,59 +151,59 @@
 </head>
 <body>
 
-    <h1>United States</h1>
+    <h1>Brazil</h1>
     <div class="container">
         <div class="summary-box">
             <div>
-                <h2>About the United States</h2>
-                <p>The United States, the third-largest country in the world, is known for its diverse landscapes, ranging from the vast plains of the Midwest to the towering Rocky Mountains, the lush forests of the Pacific Northwest, and the unique ecosystems of the Everglades. The U.S. is home to a wide variety of wildlife and plant species, and it plays a significant role in global environmental conservation efforts.</p>
+                <h2>About Brazil</h2>
+                <p>Brazil, the largest country in South America, is renowned for its vast Amazon Rainforest, diverse ecosystems, and rich biodiversity. It is home to the Amazon River, the world's largest river by discharge volume, and the Pantanal, the world's largest tropical wetland. Brazil's ecosystems are critical to global climate regulation and biodiversity conservation.</p>
             </div>
         </div>
 
         <div class="box-container">
             <div class="info-box">
-                <h3>Vegetation in the United States</h3>
-                <p>The United States features a wide range of vegetation, from temperate forests to deserts and grasslands. Key species include:</p>
+                <h3>Vegetation in Brazil</h3>
+                <p>Brazil's vegetation is incredibly diverse, ranging from tropical rainforests to savannas and mangroves. Key species include:</p>
                 <ul class="list">
-                    <li>Redwood Trees</li>
-                    <li>Douglas Fir</li>
-                    <li>Ponderosa Pine</li>
-                    <li>Oak Trees</li>
-                    <li>Maple Trees</li>
-                    <li>Joshua Trees</li>
-                    <li>Saguaro Cactus</li>
-                    <li>Prairie Grasses</li>
+                    <li>Brazil Nut Tree</li>
+                    <li>Rubber Tree</li>
+                    <li>Pau Brasil (Brazilwood)</li>
+                    <li>Açaí Palm</li>
+                    <li>Mangrove Trees</li>
+                    <li>Ipê (Trumpet Trees)</li>
+                    <li>Jatobá</li>
+                    <li>Buriti Palm</li>
                 </ul>
             </div>
 
             <div class="donation-box">
                 <h3>Donate to Reforestation</h3>
-                <p>Help restore the United States’ ecosystems by supporting these organizations:</p>
+                <p>Help restore Brazil’s ecosystems by supporting these organizations:</p>
                 <ul class="list">
-                    <li><a href="https://www.americanforests.org" target="_blank">American Forests</a></li>
-                    <li><a href="https://www.nature.org" target="_blank">The Nature Conservancy</a></li>
-                    <li><a href="https://www.arborday.org" target="_blank">Arbor Day Foundation</a></li>
-                    <li><a href="https://www.nationalforests.org" target="_blank">National Forest Foundation</a></li>
+                    <li><a href="https://www.amazonconservation.org" target="_blank">Amazon Conservation Association</a></li>
+                    <li><a href="https://www.rainforesttrust.org" target="_blank">Rainforest Trust</a></li>
+                    <li><a href="https://www.sosamazonia.org.br" target="_blank">SOS Amazônia</a></li>
+                    <li><a href="https://www.itecologia.org.br" target="_blank">Instituto Terra</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="fun-fact">
-            <p>Did you know? The United States has over 750 million acres of forest, covering about one-third of the country's total land area!</p>
+            <p>Did you know? The Amazon Rainforest in Brazil produces about 6% of the world's oxygen and is often referred to as the "lungs of the Earth"!</p>
         </div>
 
-        <button id="toggle-highlight" class="btn">Highlight the United States on Map</button>
+        <button id="toggle-highlight" class="btn">Highlight Brazil on Map</button>
         <a href="/game" class="btn">Back to Map</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const countryId = 'US'; // Country ID for the United States
+            const countryId = 'BR'; // Country ID for Brazil
             const toggleButton = document.getElementById('toggle-highlight');
 
             const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
             const isHighlighted = highlightedCountries.includes(countryId);
-            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight the United States on Map';
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Brazil on Map';
 
             toggleButton.addEventListener('click', function () {
                 if (isHighlighted) {
@@ -216,7 +216,7 @@
                 }
 
                 localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
-                toggleButton.textContent = isHighlighted ? 'Highlight the United States on Map' : 'Remove Highlight';
+                toggleButton.textContent = isHighlighted ? 'Highlight Brazil on Map' : 'Remove Highlight';
                 location.reload();
             });
         });

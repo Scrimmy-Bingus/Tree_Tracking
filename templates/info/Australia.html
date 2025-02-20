@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States</title>
+    <title>Australia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -151,59 +151,59 @@
 </head>
 <body>
 
-    <h1>United States</h1>
+    <h1>Australia</h1>
     <div class="container">
         <div class="summary-box">
             <div>
-                <h2>About the United States</h2>
-                <p>The United States, the third-largest country in the world, is known for its diverse landscapes, ranging from the vast plains of the Midwest to the towering Rocky Mountains, the lush forests of the Pacific Northwest, and the unique ecosystems of the Everglades. The U.S. is home to a wide variety of wildlife and plant species, and it plays a significant role in global environmental conservation efforts.</p>
+                <h2>About Australia</h2>
+                <p>Australia, the world's sixth-largest country, is renowned for its unique biodiversity, vast deserts, and iconic ecosystems like the Great Barrier Reef and the Outback. It is home to many endemic species, such as kangaroos, koalas, and the Tasmanian devil. Australia's diverse landscapes range from tropical rainforests to arid deserts, making it a critical region for global conservation efforts.</p>
             </div>
         </div>
 
         <div class="box-container">
             <div class="info-box">
-                <h3>Vegetation in the United States</h3>
-                <p>The United States features a wide range of vegetation, from temperate forests to deserts and grasslands. Key species include:</p>
+                <h3>Vegetation in Australia</h3>
+                <p>Australia's vegetation is incredibly diverse, ranging from eucalyptus forests to arid scrublands. Key species include:</p>
                 <ul class="list">
-                    <li>Redwood Trees</li>
-                    <li>Douglas Fir</li>
-                    <li>Ponderosa Pine</li>
-                    <li>Oak Trees</li>
-                    <li>Maple Trees</li>
-                    <li>Joshua Trees</li>
-                    <li>Saguaro Cactus</li>
-                    <li>Prairie Grasses</li>
+                    <li>Eucalyptus (Gum Trees)</li>
+                    <li>Acacia (Wattle)</li>
+                    <li>Melaleuca (Paperbark)</li>
+                    <li>Grass Trees</li>
+                    <li>Spinifex Grass</li>
+                    <li>Banksia</li>
+                    <li>Kangaroo Paw</li>
+                    <li>Rainforest Trees (e.g., Fig Trees)</li>
                 </ul>
             </div>
 
             <div class="donation-box">
                 <h3>Donate to Reforestation</h3>
-                <p>Help restore the United States’ ecosystems by supporting these organizations:</p>
+                <p>Help restore Australia’s ecosystems by supporting these organizations:</p>
                 <ul class="list">
-                    <li><a href="https://www.americanforests.org" target="_blank">American Forests</a></li>
-                    <li><a href="https://www.nature.org" target="_blank">The Nature Conservancy</a></li>
-                    <li><a href="https://www.arborday.org" target="_blank">Arbor Day Foundation</a></li>
-                    <li><a href="https://www.nationalforests.org" target="_blank">National Forest Foundation</a></li>
+                    <li><a href="https://www.greeningaustralia.org.au" target="_blank">Greening Australia</a></li>
+                    <li><a href="https://www.treeproject.org.au" target="_blank">The Tree Project</a></li>
+                    <li><a href="https://www.landcareaustralia.org.au" target="_blank">Landcare Australia</a></li>
+                    <li><a href="https://www.bushheritage.org.au" target="_blank">Bush Heritage Australia</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="fun-fact">
-            <p>Did you know? The United States has over 750 million acres of forest, covering about one-third of the country's total land area!</p>
+            <p>Did you know? Australia is home to over 24,000 species of native plants, many of which are found nowhere else on Earth!</p>
         </div>
 
-        <button id="toggle-highlight" class="btn">Highlight the United States on Map</button>
+        <button id="toggle-highlight" class="btn">Highlight Australia on Map</button>
         <a href="/game" class="btn">Back to Map</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const countryId = 'US'; // Country ID for the United States
+            const countryId = 'AU'; // Country ID for Australia
             const toggleButton = document.getElementById('toggle-highlight');
 
             const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
             const isHighlighted = highlightedCountries.includes(countryId);
-            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight the United States on Map';
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Australia on Map';
 
             toggleButton.addEventListener('click', function () {
                 if (isHighlighted) {
@@ -216,7 +216,7 @@
                 }
 
                 localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
-                toggleButton.textContent = isHighlighted ? 'Highlight the United States on Map' : 'Remove Highlight';
+                toggleButton.textContent = isHighlighted ? 'Highlight Australia on Map' : 'Remove Highlight';
                 location.reload();
             });
         });

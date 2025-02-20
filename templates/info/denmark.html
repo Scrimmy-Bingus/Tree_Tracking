@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States</title>
+    <title>Denmark</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -151,59 +151,59 @@
 </head>
 <body>
 
-    <h1>United States</h1>
+    <h1>Denmark</h1>
     <div class="container">
         <div class="summary-box">
             <div>
-                <h2>About the United States</h2>
-                <p>The United States, the third-largest country in the world, is known for its diverse landscapes, ranging from the vast plains of the Midwest to the towering Rocky Mountains, the lush forests of the Pacific Northwest, and the unique ecosystems of the Everglades. The U.S. is home to a wide variety of wildlife and plant species, and it plays a significant role in global environmental conservation efforts.</p>
+                <h2>About Denmark</h2>
+                <p>Denmark, a Scandinavian country in Northern Europe, is known for its flat landscapes, extensive coastlines, and commitment to sustainability. The country is made up of the Jutland Peninsula and numerous islands, with a strong focus on renewable energy and environmental protection. Denmark's forests, wetlands, and coastal areas are home to a variety of plant and animal species.</p>
             </div>
         </div>
 
         <div class="box-container">
             <div class="info-box">
-                <h3>Vegetation in the United States</h3>
-                <p>The United States features a wide range of vegetation, from temperate forests to deserts and grasslands. Key species include:</p>
+                <h3>Vegetation in Denmark</h3>
+                <p>Denmark's vegetation includes a mix of deciduous forests, grasslands, and coastal plants. Key species include:</p>
                 <ul class="list">
-                    <li>Redwood Trees</li>
-                    <li>Douglas Fir</li>
-                    <li>Ponderosa Pine</li>
+                    <li>Beech Trees</li>
                     <li>Oak Trees</li>
-                    <li>Maple Trees</li>
-                    <li>Joshua Trees</li>
-                    <li>Saguaro Cactus</li>
-                    <li>Prairie Grasses</li>
+                    <li>Birch Trees</li>
+                    <li>Pine Trees</li>
+                    <li>Spruce Trees</li>
+                    <li>Heather</li>
+                    <li>Sea Buckthorn</li>
+                    <li>Reeds (in wetlands)</li>
                 </ul>
             </div>
 
             <div class="donation-box">
                 <h3>Donate to Reforestation</h3>
-                <p>Help restore the United States’ ecosystems by supporting these organizations:</p>
+                <p>Help restore Denmark’s ecosystems by supporting these organizations:</p>
                 <ul class="list">
-                    <li><a href="https://www.americanforests.org" target="_blank">American Forests</a></li>
-                    <li><a href="https://www.nature.org" target="_blank">The Nature Conservancy</a></li>
-                    <li><a href="https://www.arborday.org" target="_blank">Arbor Day Foundation</a></li>
-                    <li><a href="https://www.nationalforests.org" target="_blank">National Forest Foundation</a></li>
+                    <li><a href="https://www.skoven.dk" target="_blank">Skoven i Danmark</a></li>
+                    <li><a href="https://www.wwf.dk" target="_blank">WWF Denmark</a></li>
+                    <li><a href="https://www.naturstyrelsen.dk" target="_blank">Danish Nature Agency</a></li>
+                    <li><a href="https://www.tree-nation.com" target="_blank">Tree-Nation</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="fun-fact">
-            <p>Did you know? The United States has over 750 million acres of forest, covering about one-third of the country's total land area!</p>
+            <p>Did you know? Denmark is one of the world leaders in wind energy, with wind turbines supplying over 40% of the country's electricity!</p>
         </div>
 
-        <button id="toggle-highlight" class="btn">Highlight the United States on Map</button>
+        <button id="toggle-highlight" class="btn">Highlight Denmark on Map</button>
         <a href="/game" class="btn">Back to Map</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const countryId = 'US'; // Country ID for the United States
+            const countryId = 'DK'; // Country ID for Denmark
             const toggleButton = document.getElementById('toggle-highlight');
 
             const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
             const isHighlighted = highlightedCountries.includes(countryId);
-            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight the United States on Map';
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Denmark on Map';
 
             toggleButton.addEventListener('click', function () {
                 if (isHighlighted) {
@@ -216,7 +216,7 @@
                 }
 
                 localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
-                toggleButton.textContent = isHighlighted ? 'Highlight the United States on Map' : 'Remove Highlight';
+                toggleButton.textContent = isHighlighted ? 'Highlight Denmark on Map' : 'Remove Highlight';
                 location.reload();
             });
         });

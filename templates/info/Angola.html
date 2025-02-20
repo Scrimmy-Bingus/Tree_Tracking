@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States</title>
+    <title>Angola</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -151,59 +151,58 @@
 </head>
 <body>
 
-    <h1>United States</h1>
+    <h1>Angola</h1>
     <div class="container">
         <div class="summary-box">
             <div>
-                <h2>About the United States</h2>
-                <p>The United States, the third-largest country in the world, is known for its diverse landscapes, ranging from the vast plains of the Midwest to the towering Rocky Mountains, the lush forests of the Pacific Northwest, and the unique ecosystems of the Everglades. The U.S. is home to a wide variety of wildlife and plant species, and it plays a significant role in global environmental conservation efforts.</p>
+                <h2>About Angola</h2>
+                <p>Angola, located in Southern Africa, is known for its diverse landscapes, including tropical Atlantic beaches, a labyrinthine system of rivers, and the Sub-Saharan desert. The country is rich in natural resources, particularly oil and diamonds, and has a vibrant cultural heritage.</p>
             </div>
         </div>
 
         <div class="box-container">
             <div class="info-box">
-                <h3>Vegetation in the United States</h3>
-                <p>The United States features a wide range of vegetation, from temperate forests to deserts and grasslands. Key species include:</p>
+                <h3>Vegetation in Angola</h3>
+                <p>Angola features a variety of vegetation, from tropical rainforests to savannas. Key species include:</p>
                 <ul class="list">
-                    <li>Redwood Trees</li>
-                    <li>Douglas Fir</li>
-                    <li>Ponderosa Pine</li>
-                    <li>Oak Trees</li>
-                    <li>Maple Trees</li>
-                    <li>Joshua Trees</li>
-                    <li>Saguaro Cactus</li>
-                    <li>Prairie Grasses</li>
+                    <li>Baobab</li>
+                    <li>Mopane</li>
+                    <li>Miombo Woodland</li>
+                    <li>Acacia</li>
+                    <li>Palm Trees</li>
+                    <li>Ebony</li>
+                    <li>Mahogany</li>
+                    <li>Grasslands</li>
                 </ul>
             </div>
 
             <div class="donation-box">
                 <h3>Donate to Reforestation</h3>
-                <p>Help restore the United States’ ecosystems by supporting these organizations:</p>
+                <p>Help restore Angola’s ecosystems by supporting these organizations:</p>
                 <ul class="list">
-                    <li><a href="https://www.americanforests.org" target="_blank">American Forests</a></li>
-                    <li><a href="https://www.nature.org" target="_blank">The Nature Conservancy</a></li>
-                    <li><a href="https://www.arborday.org" target="_blank">Arbor Day Foundation</a></li>
-                    <li><a href="https://www.nationalforests.org" target="_blank">National Forest Foundation</a></li>
+                    <li><a href="https://onetreeplanted.org" target="_blank">One Tree Planted</a></li>
+                    <li><a href="https://rootsforpeace.org" target="_blank">Roots for Peace</a></li>
+                    <li><a href="https://www.greeninitiativeafghanistan.org" target="_blank">Green Initiative Angola</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="fun-fact">
-            <p>Did you know? The United States has over 750 million acres of forest, covering about one-third of the country's total land area!</p>
+            <p>Did you know? Angola is home to the Okavango Delta, one of the largest inland delta systems in the world!</p>
         </div>
 
-        <button id="toggle-highlight" class="btn">Highlight the United States on Map</button>
+        <button id="toggle-highlight" class="btn">Highlight Angola on Map</button>
         <a href="/game" class="btn">Back to Map</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const countryId = 'US'; // Country ID for the United States
+            const countryId = 'AO'; // Country ID for Angola
             const toggleButton = document.getElementById('toggle-highlight');
 
             const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
             const isHighlighted = highlightedCountries.includes(countryId);
-            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight the United States on Map';
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Angola on Map';
 
             toggleButton.addEventListener('click', function () {
                 if (isHighlighted) {
@@ -216,7 +215,7 @@
                 }
 
                 localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
-                toggleButton.textContent = isHighlighted ? 'Highlight the United States on Map' : 'Remove Highlight';
+                toggleButton.textContent = isHighlighted ? 'Highlight Angola on Map' : 'Remove Highlight';
                 location.reload();
             });
         });

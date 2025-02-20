@@ -3,156 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tree Planting Template</title>
+    <title>Canada</title>
     <style>
         body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #F1F4F0;
-            color: #3d5a3a;
+            font-family: Arial, sans-serif;
+            background-color: #f4f1e1; 
+            color: #3c3c3c;
             margin: 0;
             padding: 0;
         }
 
         h1 {
             text-align: center;
-            font-size: 2.5em;
-            margin-top: 20px;
-            color: #2e4b35;
-        }
-
-        .donation-info {
-            text-align: center;
-            margin: 10px 0;
-            font-size: 1.2em;
-            color: #6b8e23;
+            color: #3b5c43; /* Dark green */
+            margin-top: 40px;
+            font-size: 3em;
+            text-transform: uppercase;
         }
 
         .container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-            padding: 0 20px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 15px;
         }
 
-        .box {
-            background-color: #fff;
+        .summary-box {
+            background-color: #ffffff;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 300px;
-            flex: 1;
-        }
-
-        .box h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #6b8e23;
-        }
-
-        .box p, .box ul {
-            font-size: 1em;
-            color: #3e5b3c;
-        }
-
-        .box ul {
-            list-style-type: disc;
-            padding-left: 20px;
+            width: 100%;
+            max-width: 960px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
             text-align: left;
         }
 
-        .box a {
-            color: #8b4513;
-            text-decoration: none;
+        .summary-box h2 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            flex: 1;
         }
 
-        .box a:hover {
-            text-decoration: underline;
+        .summary-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex: 2;
         }
 
-        .input-box input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #8b4513;
-            border-radius: 5px;
+        .info-box, .donation-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .donation-box {
+            background-color: #e8f3e3; /* Light green */
+        }
+
+        .info-box h3,
+        .donation-box h3 {
+            color: #3b5c43; /* Dark green */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p,
+        .donation-box p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .list {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: disc;
+            font-size: 1.1em;
+            color: #555;
         }
 
         .btn {
-            background-color: #8b4513;
+            background-color: #6c9c4b;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 30px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .btn:hover {
-            background-color: #6b8e23;
+            background-color: #58873a;
+            transform: scale(1.05);
+        }
+
+        #toggle-highlight {
+            background-color: #3b8f2e;
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-highlight:hover {
+            background-color: #2d6a4f;
+        }
+
+        .fun-fact {
+            font-size: 1.2em;
+            color: #3b5c43;
+            margin-top: 1px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 960px;
+            margin-bottom: 40px;
+            gap: 10px;
+        }
+
+        .info-box, .donation-box {
+            flex: 1;
+            height: 100%;
         }
     </style>
-    <script>
-        function saveDonation() {
-            const donationInput = document.getElementById('donation-amount');
-            const donationDisplay = document.getElementById('donation-display');
-            const amount = donationInput.value;
-            if (amount && amount > 0) {
-                donationDisplay.textContent = `$${amount}`;
-                localStorage.setItem('donationAmount', amount);
-                donationInput.value = '';
-            }
-        }
-
-        window.onload = function() {
-            const savedDonation = localStorage.getItem('donationAmount');
-            if (savedDonation) {
-                document.getElementById('donation-display').textContent = `$${savedDonation}`;
-            }
-        }
-    </script>
 </head>
 <body>
-    <h1>Country - Tree Planting</h1>
-    <div class="donation-info">
-        <strong>Total Donated:</strong> <span id="donation-display">$0</span>
-    </div>
 
+    <h1>Canada</h1>
     <div class="container">
-        <!-- Box 1: About Country -->
-        <div class="box">
-            <h2>About the Country</h2>
-            <p>This country has a rich biodiversity and unique ecosystems. Tree planting helps restore habitats and fight climate change.</p>
+        <div class="summary-box">
+            <div>
+                <h2>About Canada</h2>
+                <p>Canada, the second-largest country in the world, is known for its vast wilderness, diverse ecosystems, and abundant natural resources. From the Rocky Mountains to the boreal forests and the Arctic tundra, Canada's landscapes are home to a wide variety of wildlife, including bears, moose, and beavers. The country is also a global leader in environmental conservation and sustainable practices.</p>
+            </div>
         </div>
 
-        <!-- Box 2: Tree Types -->
-        <div class="box">
-            <h2>Types of Trees</h2>
-            <ul>
-                <li>Tree Type 1</li>
-                <li>Tree Type 2</li>
-                <li>Tree Type 3</li>
-            </ul>
+        <div class="box-container">
+            <div class="info-box">
+                <h3>Vegetation in Canada</h3>
+                <p>Canada's vegetation is diverse, ranging from dense forests to Arctic tundra. Key species include:</p>
+                <ul class="list">
+                    <li>Maple Trees</li>
+                    <li>Spruce Trees</li>
+                    <li>Pine Trees</li>
+                    <li>Fir Trees</li>
+                    <li>Birch Trees</li>
+                    <li>Cedar Trees</li>
+                    <li>Wildflowers (e.g., Fireweed)</li>
+                    <li>Arctic Moss</li>
+                </ul>
+            </div>
+
+            <div class="donation-box">
+                <h3>Donate to Reforestation</h3>
+                <p>Help restore Canada’s ecosystems by supporting these organizations:</p>
+                <ul class="list">
+                    <li><a href="https://www.treecanada.ca" target="_blank">Tree Canada</a></li>
+                    <li><a href="https://www.natureconservancy.ca" target="_blank">Nature Conservancy Canada</a></li>
+                    <li><a href="https://www.davidsuzuki.org" target="_blank">David Suzuki Foundation</a></li>
+                    <li><a href="https://www.forests.org" target="_blank">Forests Ontario</a></li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Box 3: Donation Links -->
-        <div class="box">
-            <h2>How to Contribute</h2>
-            <p>Support tree planting by visiting these organizations:</p>
-            <ul>
-                <li><a href="#" target="_blank">Organization 1</a></li>
-                <li><a href="#" target="_blank">Organization 2</a></li>
-            </ul>
+        <div class="fun-fact">
+            <p>Did you know? Canada has 9% of the world's forests, making it one of the most forested countries on Earth!</p>
         </div>
 
-        <!-- Box 4: Donation Input -->
-        <div class="box input-box">
-            <h2>Track Your Donation</h2>
-            <label for="donation-amount">Enter donation amount:</label><br>
-            <input type="number" id="donation-amount" placeholder="$">
-            <button class="btn" onclick="saveDonation()">Submit</button>
-        </div>
+        <button id="toggle-highlight" class="btn">Highlight Canada on Map</button>
+        <a href="/game" class="btn">Back to Map</a>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const countryId = 'CA'; // Country ID for Canada
+            const toggleButton = document.getElementById('toggle-highlight');
+
+            const highlightedCountries = JSON.parse(localStorage.getItem('highlightedCountries') || '[]');
+            const isHighlighted = highlightedCountries.includes(countryId);
+            toggleButton.textContent = isHighlighted ? 'Remove Highlight' : 'Highlight Canada on Map';
+
+            toggleButton.addEventListener('click', function () {
+                if (isHighlighted) {
+                    const index = highlightedCountries.indexOf(countryId);
+                    if (index !== -1) {
+                        highlightedCountries.splice(index, 1);
+                    }
+                } else {
+                    highlightedCountries.push(countryId);
+                }
+
+                localStorage.setItem('highlightedCountries', JSON.stringify(highlightedCountries));
+                toggleButton.textContent = isHighlighted ? 'Highlight Canada on Map' : 'Remove Highlight';
+                location.reload();
+            });
+        });
+    </script>
+
 </body>
 </html>
