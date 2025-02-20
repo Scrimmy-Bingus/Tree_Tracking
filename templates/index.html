@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive World Map Tracker</title>
+    <title>Tree Planting Game</title>
     <style>
         path {
             fill: #797777; /* Default color for countries */
@@ -132,7 +132,7 @@
             margin-top: 20px;
         }
 
-        /* Focal point box for progress tracker */
+        /*  progress tracker */
         #progress-box {
             position: fixed;
             top: 20px;
@@ -150,8 +150,9 @@
 </head>
 <body>
     <header>
-        <h1>Interactive World Map Tracker</h1>
-        <p>Track your progress and learn about different countries!</p>
+        <h1>Tree Planting Game</h1>
+        <p>Objective: Try and Plant one Tree in Each Country!
+        </p>
     </header>
 
     <!-- Progress Tracker Box -->
@@ -168,15 +169,109 @@
 
     <div id="content">
         <div id="sidebar">
-            <h3>Country Pages</h3>
+            <h3>Donate a tree to:</h3>
+            <button onclick="location.href='/afghanistan'">Afghanistan</button>
+            <button onclick="location.href='/albania'">Albania</button>
+            <button onclick="location.href='/algeria'">Algeria</button>
+            <button onclick="location.href='/angola'">Angola</button>
+            <button onclick="location.href='/argentina'">Argentina</button>
+            <button onclick="location.href='/armenia'">Armenia</button>
+            <button onclick="location.href='/australia'">Australia</button>
+            <button onclick="location.href='/austria'">Austria</button>
+            <button onclick="location.href='/azerbaijan'">Azerbaijan</button>
+            <button onclick="location.href='/bangladesh'">Bangladesh</button>
+            <button onclick="location.href='/belarus'">Belarus</button>
+            <button onclick="location.href='/belgium'">Belgium</button>
+            <button onclick="location.href='/benin'">Benin</button>
+            <button onclick="location.href='/bhutan'">Bhutan</button>
+            <button onclick="location.href='/bolivia'">Bolivia</button>
+            <button onclick="location.href='/bosnia-and-herzegovina'">Bosnia and Herzegovina</button>
+            <button onclick="location.href='/botswana'">Botswana</button>
+            <button onclick="location.href='/brazil'">Brazil</button>
+            <button onclick="location.href='/bulgaria'">Bulgaria</button>
+            <button onclick="location.href='/burkina-faso'">Burkina Faso</button>
+            <button onclick="location.href='/burundi'">Burundi</button>
+            <button onclick="location.href='/cambodia'">Cambodia</button>
+            <button onclick="location.href='/cameroon'">Cameroon</button>
             <button onclick="location.href='/canada'">Canada</button>
-            <button onclick="location.href='/us'">United States</button>
-            <button onclick="location.href='/mexico'">Mexico</button>
-            <button onclick="location.href='/greece'">Greece</button>
-            <button onclick="location.href='/guyana'">Guyana</button>
-            <button onclick="location.href='/russia'">Russia</button>
-            <button onclick="location.href='/greenland'">Greenland</button>
+            <button onclick="location.href='/central-african-republic'">Central African Republic</button>
+            <button onclick="location.href='/chad'">Chad</button>
+            <button onclick="location.href='/chile'">Chile</button>
+            <button onclick="location.href='/china'">China</button>
+            <button onclick="location.href='/colombia'">Colombia</button>
+            <button onclick="location.href='/cote-divoire'">Côte d'Ivoire</button>
+            <button onclick="location.href='/croatia'">Croatia</button>
+            <button onclick="location.href='/cuba'">Cuba</button>
+            <button onclick="location.href='/czech-republic'">Czech Republic</button>
+            <button onclick="location.href='/democratic-republic-of-the-congo'">Democratic Republic of the Congo</button>
+            <button onclick="location.href='/denmark'">Denmark</button>
+            <button onclick="location.href='/dominican-republic'">Dominican Republic</button>
+            <button onclick="location.href='/ecuador'">Ecuador</button>
+            <button onclick="location.href='/egypt'">Egypt</button>
+            <button onclick="location.href='/el-salvador'">El Salvador</button>
+            <button onclick="location.href='/ethiopia'">Ethiopia</button>
+            <button onclick="location.href='/fiji'">Fiji</button>
+            <button onclick="location.href='/finland'">Finland</button>
             <button onclick="location.href='/france'">France</button>
+            <button onclick="location.href='/gabon'">Gabon</button>
+            <button onclick="location.href='/gambia'">Gambia</button>
+            <button onclick="location.href='/georgia'">Georgia</button>
+            <button onclick="location.href='/germany'">Germany</button>
+            <button onclick="location.href='/ghana'">Ghana</button>
+            <button onclick="location.href='/greece'">Greece</button>
+            <button onclick="location.href='/guatemala'">Guatemala</button>
+            <button onclick="location.href='/guinea'">Guinea</button>
+            <button onclick="location.href='/guyana'">Guyana</button>
+            <button onclick="location.href='/haiti'">Haiti</button>
+            <button onclick="location.href='/honduras'">Honduras</button>
+            <button onclick="location.href='/hungary'">Hungary</button>
+            <button onclick="location.href='/india'">India</button>
+            <button onclick="location.href='/indonesia'">Indonesia</button>
+            <button onclick="location.href='/iran'">Iran</button>
+            <button onclick="location.href='/iraq'">Iraq</button>
+            <button onclick="location.href='/israel'">Israel</button>
+            <button onclick="location.href='/italy'">Italy</button>
+            <button onclick="location.href='/jamaica'">Jamaica</button>
+            <button onclick="location.href='/japan'">Japan</button>
+            <button onclick="location.href='/jordan'">Jordan</button>
+            <button onclick="location.href='/kazakhstan'">Kazakhstan</button>
+            <button onclick="location.href='/kenya'">Kenya</button>
+            <button onclick="location.href='/kyrgyzstan'">Kyrgyzstan</button>
+            <button onclick="location.href='/laos'">Laos</button>
+            <button onclick="location.href='/lebanon'">Lebanon</button>
+            <button onclick="location.href='/liberia'">Liberia</button>
+            <button onclick="location.href='/libya'">Libya</button>
+            <button onclick="location.href='/madagascar'">Madagascar</button>
+            <button onclick="location.href='/malawi'">Malawi</button>
+            <button onclick="location.href='/malaysia'">Malaysia</button>
+            <button onclick="location.href='/mali'">Mali</button>
+            <button onclick="location.href='/mexico'">Mexico</button>
+            <button onclick="location.href='/mongolia'">Mongolia</button>
+            <button onclick="location.href='/morocco'">Morocco</button>
+            <button onclick="location.href='/mozambique'">Mozambique</button>
+            <button onclick="location.href='/myanmar'">Myanmar</button>
+            <button onclick="location.href='/namibia'">Namibia</button>
+            <button onclick="location.href='/nepal'">Nepal</button>
+            <button onclick="location.href='/netherlands'">Netherlands</button>
+            <button onclick="location.href='/new-zealand'">New Zealand</button>
+            <button onclick="location.href='/nicaragua'">Nicaragua</button>
+            <button onclick="location.href='/niger'">Niger</button>
+            <button onclick="location.href='/nigeria'">Nigeria</button>
+            <button onclick="location.href='/north-korea'">North Korea</button>
+            <button onclick="location.href='/norway'">Norway</button>
+            <button onclick="location.href='/pakistan'">Pakistan</button>
+            <button onclick="location.href='/papua-new-guinea'">Papua New Guinea</button>
+            <button onclick="location.href='/paraguay'">Paraguay</button>
+            <button onclick="location.href='/peru'">Peru</button>
+            <button onclick="location.href='/philippines'">Philippines</button>
+            <button onclick="location.href='/poland'">Poland</button>
+            <button onclick="location.href='/portugal'">Portugal</button>
+            <button onclick="location.href='/rwanda'">Rwanda</button>
+            <button onclick="location.href='/saudi-arabia'">Saudi Arabia</button>
+            <button onclick="location.href='/senegal'">Senegal</button>
+            <button onclick="location.href='/south-africa'">South Africa</button>
+            <button onclick="location.href='/sudan'">Sudan</button>
+            
 
             <button id="reset-highlight">Reset Highlights</button>
         </div>
@@ -187,7 +282,7 @@
     </div>
 
     <footer>
-        © 2025 Interactive World Map. Designed with care for explorers.
+        © 2025 Designed for Green Pioneers Hackathon by Marc Chardon
     </footer>
 
     <script>
