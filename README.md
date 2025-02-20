@@ -21,7 +21,7 @@ public – Contains static assets such as images and icons.
 src – Main source code, including React components, styles, and scripts.
 package.json – Manages dependencies and project scripts.
 .gitignore – Specifies files to exclude from version control.
-Troubleshooting
+Some trouble shooting tips
 If npm commands are not recognized, restart the terminal or reinstall Node.js.
 If dependencies are missing, delete the node_modules folder and reinstall them.
 On Windows, if permission issues occur when running scripts, update execution policies in PowerShell.
